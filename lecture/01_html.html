@@ -1,4 +1,8 @@
 <!-- 
+  comment(주석) : 코드에 대한 설명 작성 
+-->
+
+<!-- 
 ########################################################################
 📌 HTML 
 1. HyperText Markup Language
@@ -21,18 +25,72 @@
 ########################################################################
 -->
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!DOCTYPE html> <!-- 문서의 유형 지정 -->
+<html lang="en"> <!-- 문서의 시작과 끝 -->
+<head> <!-- 해당 문서의 각종 정보, 제목, 설명, 스타일시트 등을 표현 -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="keywords" content="">
-  <meta name="description" content="">
-  <title>HTML 개요</title>
+  <meta name="keywords" content="문서에 대한 키워드 작성">
+  <meta name="description" content="문서에 대한 설명 작성">
+  <title>html 개요</title>
 </head>
-<body>
-  안녕하세요. <br>
-  ㄴ마ㅓ암너아ㅣㄴㅁ
+<body> <!-- 화면에 보여줄 시각적인 요소 -->
+  안녕하세요.<br>
+  별도의 태그 없이도 그냥 작성도 가능해요.
+  <!--
+    * <br>
+    1) 줄바꿈 태그
+    2) 기본적으로 작성한 그대로가 화면에 표현되지 않음
+        줄바꿈을 넣고자 할 경우 그 위치에 줄바꿈 태그 작성
+  -->
+  <br><br>
+
+  줄바꿈이 적용됐죠?
   <hr>
+  <!--
+    * <hr>
+    1) 수평선 태그
+    2) 가로 수평선을 넣고자할 때 작성
+  -->
+
+  <!--
+    * 엔티티 코드 
+    1) 특수문자를 의미하며 &로 시작하고 ;로 끝난다.
+    2) &lt; &gt; ..
+  -->
+  작다 (less than) : &lt; <br>
+  크다 (greater than) : &gt; <br>
+  공백 : 공&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;백 <br>
+  앤드 : &amp;
+
+  <hr>
+
+  <!--
+    * <p></p>
+    1) 문단 태그
+    2) 문단 내 공백은 하나만 적용되고 줄 바꿈은 적용되지 않음
+    3) 블럭요소 (앞 뒤로 자동 줄바꿈 처리, 한 줄 전체 영역)
+  -->
+  <p align="center">
+    p태그는 줄바꿈하고자 한다면 별도의 태그를 작성해야됨 <br>
+    그리고     공백은 한개만 표현됨 
+    따라서 별도의 &nbsp;&nbsp;&nbsp;&nbsp; 엔티티코드 써야됨
+  </p>
+
+  안녕하세요?
+
+  <!--
+    * <pre></pre>
+    1) 형식을 갖춘 문단 태그
+    2) 문단에 입력한 내용을 화면에 그대로 보여줌 (공백 및 줄바꿈)
+    3) 블럭요소
+  -->
+  <pre>pre 태그는 시작태그에서부터 종료태그까지
+입력된 내용 그대로 표현한다
+줄바꿈이라던가        여러개의 공백을 바로 인식함</pre>
+  
+
+
+
 </body>
 </html>
