@@ -8,169 +8,209 @@
 <body>
 
   <!-- 
-  * <input>
-  1) 입력란 태그
-  2) 사용자에게 값을 입력받을 수 있는 텍스트 상자 또는 체크 박스 등을 만들 수 있는 태그
-  3) 인라인 요소
-  4) 형식
-      <input type="" type별속성>
-  5) type 종류
-      → 텍스트 관련 : text(기본값), password, search, url, email, tel
-      → 숫자 관련   : number, range
-      → 날짜 관련   : date, month, week, time, datetime-local
-      → 선택 관련   : radio, checkbox
-      → 버튼 관련   : button, submit, reset
-      → 기타        : file, color, hidden
-  6) 주요 속성
-      → placeholder : 안내 메세지
-      → size        : 입력란의 크기
-      → value       : 입력란에 표현할 값 / 사용자가 입력한 값
-      → readonly    : 입력란에 입력된 내용 수정 불가
-      → maxlength   : 입력란에 입력가능한 최대 글자 수
-      → required    : 입력란에 필수로 값이 입력되어야됨을 의미
-      → disabled    : 입력란을 사용안함을 의미 
+    * <input>
+    1) 입력란 태그
+    2) 사용자에게 값을 입력받을 수 있는 텍스트 상자 또는 체크 박스 등을 만들 수 있는 태그
+    3) 인라인 요소
+    4) 형식
+        <input type="" type별속성>
+    5) type 종류
+        → 텍스트 관련 : text(기본값), password, search, url, email, tel
+        → 숫자 관련   : number, range
+        → 날짜 관련   : date, month, week, time, datetime-local
+        → 선택 관련   : radio, checkbox
+        → 버튼 관련   : button, submit, reset
+        → 기타        : file, color, hidden
+    6) 주요 속성
+        → placeholder : 안내 메세지
+        → size        : 입력란의 크기
+        → value       : 입력란에 표현할 값 / 사용자가 입력한 값
+        → readonly    : 입력란에 입력된 내용 수정 불가
+        → maxlength   : 입력란에 입력가능한 최대 글자 수
+        → required    : 입력란에 필수로 값이 입력되어야됨을 의미
+        → disabled    : 입력란을 사용안함을 의미 
+            ...
+  -->
+
+  <h1>input 태그</h1>
+
+  <h2>텍스트 관련 input</h2>
+  아이디 : <input type="text"> <br> <!--기본 한줄짜리 텍스트상자-->
+  비밀번호 : <input type="password"> <br> <!-- 입력값 노출되지 않음 -->
+  검색어 : <input type="search"> <br><br>
+
+  <!-- 
+    * <label>
+    1) 레이블 태그
+    2) 텍스트 클릭 시 입력란 요소에 포커싱이 되도록 도와주는 태그
+    3) 인라인 요소
+    4) 형식
+        <label for="아이디">텍스트</label>
+        <input id="아이디">
+  -->
+  <label for="userId">아이디 : </label>
+  <input type="text" id="userId" placeholder="영문,숫자 포함 최대 8자리"> <br>
+
+  <label for="userPwd">비밀번호 : </label>
+  <input type="password" id="userPwd"> <br>
+
+  <label>
+    검색어 : 
+    <input type="search" size="30">
+  </label>
+  <br>
+
+  기관명 : <input type="text" value="원티드랩" readonly>
+  <br>
+
+  <button>등록하기</button>
+
+
+  <!--
+    * <form>
+    1) 입력양식 태그 (다수의 입력값을 제출할 수 있는 태그)
+    2) 하나의 요청을 처리하는 단위로 사용자가 입력한 값들을 서버측으로 보낼때(요청) 사용되는 태그
+    3) form 태그 내에 input 과 같은 태그들로 구성함
+    4) submit(제출) : 폼 내의 입력값들을 모두 서버측으로 전송해줌
+    5) 형식
+        <form action="" method="">
+          xx : <input> 
+          xx : <input>
           ...
--->
-
-<h1>input 태그</h1>
-<h2>텍스트 관련 input</h2>
-<label for="userId">아이디 </label>: <input type="text" name="" id="userId"><br/>
-<label for="userPwd">비밀번호</label> : <input type="password" name="" id="userPwd"><br>
-<label for="56">검색어 </label>:  <input type="search" name="" id="56"><br><br>
-
-<label>
-  검색어 : 
-  <input type="search" size="30">
-</label><br>
-
-기관명 : <input type="text" value="원티드랩" readonly><br>
-
-<button>등록하기</button>
-
-<input type="button" value="등록하기">
-
-
-<!-- 
-  * <label>
-  1) 레이블 태그
-  2) 텍스트 클릭 시 입력란 요소에 포커싱이 되도록 도와주는 태그
-  3) 인라인 요소
-  4) 형식
-      <label for="아이디">텍스트</label>
-      <input id="아이디">
--->
-
-<!--
-  * <form>
-  1) 입력양식 태그 (다수의 입력값을 제출할 수 있는 태그)
-  2) 하나의 요청을 처리하는 단위로 사용자가 입력한 값들을 서버측으로 보낼때(요청) 사용되는 태그
-  3) form 태그 내에 input 과 같은 태그들로 구성함
-  4) submit(제출) : 폼 내의 입력값들을 모두 서버측으로 전송해줌
-  5) 형식
-      <form action="" method="">
-        xx : <input> 
-        xx : <input>
-        ...
-        <submit>
-      </form>
-  6) 주요 속성
-      → action : 요청할 서버의 경로 
-      → method : 요청 전송 방식 
-                  → get 방식  : 요청시 사용자가 입력한 값들이 url에 노출됨, 전달값 크기 제한 있음 (기본값)
-                  → post 방식 : 요청시 사용자가 입력한 값들이 url에 노출되지 않음, 전달값 크기 제한 없음
-      [참고] target : action속성의 프로그램(페이지)을 어떻게 열것인지 지정
-      [참고] autocomplete : 이전 입력내용 출력하는 기능. 생략하면 자동으로 출력(default : on)
-  7) 유의사항
-      → form 내의 input 태그들마다 name 속성값을 부여해야만 값이 넘어가게되어있음 (각 값들을 식별해주는 식별자의 역할)
--->
-<hr>
-<h1>form 관련 태그</h1>
-
-<form action="server/signup.do" method="post">
-  <fieldset>
-    <legend>회원가입</legend>
-    아이디 : <input type="text" maxlength="12" name="userId"> <br>
-    비밀번호 : <input type="password" maxlength="15" name="userPwd"> <br>
-    전화번호 : <input type="tel"><br>
-    이메일 : <input type="email"><br>
-    홈페이지 : <input type="url">
-
-    <input type="submit" value="회원가입">
-  </fieldset>
-</form>
-
-<!--
-  * <fieldset>
-  1) 그룹으로 묶어 표현하는 태그 (기본적으로 테두리로 묶어서 표현해줌)
-  2) <legend> : 해당 그룹의 제목을 표현할 수 있는 태그 
--->
-
-
-<!--
-  * <textarea>
-  1) 다중행 입력란 태그
-  2) 여러줄 텍스트 입력을 위한 상자
-  3) 인라인 요소
-  4) 형식
-      <textarea cols="" rows=""></textarea>
-  5) 주요 속성
-      → rows : 입력 가능 행 수
-      → cols : 입력 가능 열 수 
--->
-
-<!-- * type="number" : 숫자만 입력가능, 스핀박스(위/아래 화살표버튼)가 표현됨 -->
-<!-- * type="range" : 슬라이드바가 표현됨 -->
-
-<!-- * type="date" : 년도,월,일 -->
-<!-- * type="month" : 년도,월 -->
-<!-- * type="week" : 년도,몇번째주 -->
-<!-- * type="time" : 오전/오후,시,분 -->
-<!-- * type="datetime-local" : 년도,월,일, 오전/오후,시,분 -->
-
-<!--
-  * type="radio"
-  1) 라디오버튼
-  2) 제시된 여러개의 값들 중 오로지 한개만을 선택할 수 있게 할때 사용
-  3) name 속성값이 동일한 것들끼리 하나의 그룹으로 묶임
-      → 그룹 내에 한가지만 선택 가능 
-  4) 제출(submit)시 checked(선택된) value값이 넘어감
+          <submit>
+        </form>
+    6) 주요 속성
+        → action : 요청할 서버의 경로 
+        → method : 요청 전송 방식 
+                    → get 방식  : 요청시 사용자가 입력한 값들이 url에 노출됨, 전달값 크기 제한 있음 (기본값)
+                    → post 방식 : 요청시 사용자가 입력한 값들이 url에 노출되지 않음, 전달값 크기 제한 없음
+        [참고] target : action속성의 프로그램(페이지)을 어떻게 열것인지 지정
+        [참고] autocomplete : 이전 입력내용 출력하는 기능. 생략하면 자동으로 출력(default : on)
+    7) 유의사항
+        → form 내의 input 태그들마다 name 속성값을 부여해야만 값이 넘어가게되어있음 (각 값들을 식별해주는 식별자의 역할)
+  -->
+  <hr>
+  <h1>form 관련 태그</h1>
   
-  * type="checkbox"
-  1) 체크박스
-  2) 제시된 여러개의 값들 중 다수 선택 가능하게 할때 사용
-  3) 제출(submit)시 checked(선택된) value값들이 다수 넘어감
--->
+  <form action="server/signup.do" method="post">
+    <fieldset>
+      <legend>회원가입</legend>
+      아이디 : <input type="text" maxlength="12" name="userId" required> <br>
+      비밀번호 : <input type="password" maxlength="15" name="userPwd" required> <br>
 
-<!--
-  * <select>, <option>
-  1) 목록 상자 태그
-  2) 여러 목록을 제시해서 그 중 선택 할 수 있도록 표현 가능 
-  3) 인라인 요소
-  4) 형식
-      <select>
-        <option value="">목록1</option>
-        <option value="">목록2</option>
-        <option value="">목록3</option>
-      </select>
-  5) 주요 속성
-      → selected : option 요소에 선택 효과를 주는 속성
-      → value
-         → option요소에 value 속성이 없을 경우 텍스트가 value값임
-         → value속성이 있을 경우 value 속성값이 value값임
+      전화번호 : <input type="tel"> <br>
+      이메일 : <input type="email"> <br>
+      홈페이지 : <input type="url"> <br>
 
-  * <datalist>
-  1) 콤보 상자 태그 (입력란 + 목록 상자)
-  2) 사용자가 직접 입력도 할 수 있고 목록 중 선택도 가능하게 표현 가능
-  3) 인라인 요소
-  4) HTML5부터 사용 가능
-  5) 형식
-      <input type="" list="datalist아이디">
-      <datalist id="아이디">
-        <option></option>
-        <option></option>
-        <option></option>
-      </datalist>
--->
+      <input type="submit" value="회원가입">
+    </fieldset>
+  </form>
+
+  <!--
+    * <fieldset>
+    1) 그룹으로 묶어 표현하는 태그 (기본적으로 테두리로 묶어서 표현해줌)
+    2) <legend> : 해당 그룹의 제목을 표현할 수 있는 태그 
+  -->
+
+
+  <!--
+    * <textarea>
+    1) 다중행 입력란 태그
+    2) 여러줄 텍스트 입력을 위한 상자
+    3) 인라인 요소
+    4) 형식
+        <textarea cols="" rows=""></textarea>
+    5) 주요 속성
+        → rows : 입력 가능 행 수
+        → cols : 입력 가능 열 수 
+  -->
+
+  <form action="">
+    <fieldset>
+      <legend>게시글 작성폼</legend>
+      제목 : <input type="text" name="title" size="35" value="기존의 게시글 제목"> <br>
+      내용 : <textarea name="content" rows="10" cols="35" placeholder="내용을 입력하세요.">기존의 게시글 내용</textarea> <br>
+      <input type="submit" value="등록하기">
+    </fieldset>
+  </form>
+
+  <hr>
+  
+  <h1>숫자, 날짜/시간 관련 input</h1>
+  <!-- * type="number" : 숫자만 입력가능, 스핀박스(위/아래 화살표버튼)가 표현됨 -->
+  <!-- * type="range" : 슬라이드바가 표현됨 -->
+
+  <!-- * type="date" : 년도,월,일 -->
+  <!-- * type="month" : 년도,월 -->
+  <!-- * type="week" : 년도,몇번째주 -->
+  <!-- * type="time" : 오전/오후,시,분 -->
+  <!-- * type="datetime-local" : 년도,월,일, 오전/오후,시,분 -->
+
+  <form action="">
+    <fieldset>
+      <legend>숫자 관련</legend>
+      수량 : <input type="number" value="0" min="0" max="10" step="2"> <br>
+      점수 : <input type="range" min="0" max="100" value="20" step="20">
+    </fieldset>
+    <fieldset>
+      <legend>날짜 및 시간 관련</legend>
+      날짜 : <input type="date"> <br>
+      월 : <input type="month"> <br>
+      주 : <input type="week"> <br>
+      시간 : <input type="time"> <br>
+      날짜와 시간 : <input type="datetime-local">
+    </fieldset>
+    <input type="submit">
+    <input type="reset">
+  </form>
+
+
+
+
+  <!--
+    * type="radio"
+    1) 라디오버튼
+    2) 제시된 여러개의 값들 중 오로지 한개만을 선택할 수 있게 할때 사용
+    3) name 속성값이 동일한 것들끼리 하나의 그룹으로 묶임
+        → 그룹 내에 한가지만 선택 가능 
+    4) 제출(submit)시 checked(선택된) value값이 넘어감
+    
+    * type="checkbox"
+    1) 체크박스
+    2) 제시된 여러개의 값들 중 다수 선택 가능하게 할때 사용
+    3) 제출(submit)시 checked(선택된) value값들이 다수 넘어감
+  -->
+
+  <!--
+    * <select>, <option>
+    1) 목록 상자 태그
+    2) 여러 목록을 제시해서 그 중 선택 할 수 있도록 표현 가능 
+    3) 인라인 요소
+    4) 형식
+        <select>
+          <option value="">목록1</option>
+          <option value="">목록2</option>
+          <option value="">목록3</option>
+        </select>
+    5) 주요 속성
+        → selected : option 요소에 선택 효과를 주는 속성
+        → value
+          → option요소에 value 속성이 없을 경우 텍스트가 value값임
+          → value속성이 있을 경우 value 속성값이 value값임
+
+    * <datalist>
+    1) 콤보 상자 태그 (입력란 + 목록 상자)
+    2) 사용자가 직접 입력도 할 수 있고 목록 중 선택도 가능하게 표현 가능
+    3) 인라인 요소
+    4) HTML5부터 사용 가능
+    5) 형식
+        <input type="" list="datalist아이디">
+        <datalist id="아이디">
+          <option></option>
+          <option></option>
+          <option></option>
+        </datalist>
+  -->
   
 </body>
 </html>
