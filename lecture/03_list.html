@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>목록 관련 태그</title>
+</head>
+<body>
+  <!-- 
+    * <ul>
+    1) 순서가 없는 목록 (unordered list)
+    2) 블럭요소
+    3) 글머리기호(불릿기호)를 이용해 목록이 구성됨
+        → disc   : ●  (디폴트)
+        → circle : ○
+        → square : ■
+    4) 형식
+        <ul type="">
+          <li>목록1</li>
+          <li>목록2</li>
+          <li>목록3</li>
+        </ul>
+  -->
+
+  <!-- 
+    * <ol>
+    1) 순서가 있는 목록 (ordered list)
+    2) 블럭요소
+    3) 번호를 이용해 목록이 구성됨
+        → 1 : 1,2,3,..  (디폴트)
+        → A : A,B,C,..
+        → a : a,b,c,..
+        → I : I,II,III,..
+        → i : i,ii,iii,..
+    4) 형식
+        <ol type="" start="" reversed>
+          <li>목록1</li>
+          <li>목록2</li>
+          <li>목록3</li>
+        </ol>
+  -->
+
+  <!-- 
+    * <dl>
+    1) 개요 목록 (description list)
+    2) 블럭요소
+    3) 제목과 설명으로 하나의 목록이 구성됨
+    4) 형식
+        <dl>
+          <dt>제목1</dt>
+          <dd>설명1</dd>
+          <dt>제목2</dt>
+          <dd>설명2</dd>
+        </dl>
+  -->
+
+  <h2>된장찌개에 들어가는 재료</h2>
+  <ul>
+    <li>테스트1</li>
+    <li>테스트2</li>
+    <li>테스트3</li>
+    <li>테스트4</li>
+  </ul>
+
+  <ul>
+    <li>테스트1</li>
+    <li>테스트2
+      <ul>
+        <li>123</li>
+        <li>456</li>
+        <li>777</li>
+        <li>890</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h2>된장찌개에 끓이는 순서</h2>
+  <ol type="a" start="3" reversed>
+    <li>육수</li>
+    <li>된장</li>
+    <li>끓이기</li>
+  </ol>
+
+  <h2>된장찌개</h2>
+  <dl>
+    <dt>재료</dt>
+    <dd>설명</dd>
+    <dt>제목</dt>
+    <dd>설명</dd>
+  </dl>
+
+  <p>좋아하는 프로그래밍 언어</p>
+  <ul>
+    <li>python</li>
+    <li>javascript</li>
+    <li>java</li>
+    <li>C++</li>
+  </ul>
+  
+  <p>프로그래밍 용어 정의</p>
+  <dl>
+    <dl>바나나</dl>
+    <dt>노랗다</dt>
+    <dl>사과</dl>
+    <dt>빨갛다</dt>
+    <dl>멜론</dl>
+    <dt>맛있다</dt>
+  </dl>
+
+</body>
+</html>
