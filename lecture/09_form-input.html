@@ -7,6 +7,8 @@
 </head>
 <body>
 
+  <div style="display: none;">
+
   <!-- 
     * <input>
     1) 입력란 태그
@@ -164,9 +166,6 @@
     <input type="reset">
   </form>
 
-
-
-
   <!--
     * type="radio"
     1) 라디오버튼
@@ -180,6 +179,35 @@
     2) 제시된 여러개의 값들 중 다수 선택 가능하게 할때 사용
     3) 제출(submit)시 checked(선택된) value값들이 다수 넘어감
   -->
+
+  <form action="server/test.do">
+    <fieldset>
+      <legend>라디오버튼</legend>
+      성별 :
+      <input type="radio" name="gender" id="genderX" value="X" checked>
+      <label for="genderM">선택안함</label>
+      <input type="radio" name="gender" id="genderM" value="M">
+      <label for="genderM">남자</label>
+      <input type="radio" name="gender" id="genderF" value="F">
+      <label for="genderF">여자</label>
+    </fieldset>
+    <fieldset>
+      <legend>체크박스</legend>
+      취미 :
+      <input type="checkbox" name="hobby" id="reading" value="reading">
+      <label for="reading">독서</label>
+      <input type="checkbox" name="hobby" id="sports" value="sports">
+      <label for="sports">운동</label>
+      <input type="checkbox" name="hobby" id="movie" value="movie">
+      <label for="movie">영화보기</label>
+    </fieldset>
+    <input type="submit" value="제출">
+    <input type="reset" value="초기화">
+  </form>
+
+  <hr>
+
+  </div>
 
   <!--
     * <select>, <option>
@@ -211,6 +239,55 @@
           <option></option>
         </datalist>
   -->
+
+  <form action="server/test.do">
+    <fieldset>
+      <legend>일반목록상자</legend>
+      국가번호 : 
+      <select name="countryNo" id="">
+        <option value="01">가나 +01</option>
+        <option value="02">가봉 +02</option>
+        <option value="82" selected>한국 +82</option>
+        <option value="99">일본 +99</option>
+      </select>
+    </fieldset>
+    <input type="submit" value="제출">
+  </form>
+
+  <hr>
+
+  <form action="server/test.do">
+    <fieldset>
+      <legend>콤보상자</legend>
+      이메일 : 
+      <input type="text" size="10"> @
+      <input type="text" list="domainList">
+      <datalist name="" id="domainList">
+        <option>naver.com</option>
+        <option>kakao.com</option>
+        <option>google.com</option>
+      </datalist>
+    </fieldset>
+    <input type="submit" value="제출">
+  </form>
+
+  <hr>
+
+  <h2>기타 input</h2>
+  <form action="server/test.do">
+    색상 : <input type="color" name="color"> <br>
+    첨부파일 : <input type="file" name="file"> <br>
+    숨김정보 : <input type="hidden" name="hidden"> <br>
+
+    <input type="submit"> <!-- 제출 -->
+    <input type="reset"> <!-- 초기화 -->
+    <input type="button" value="일반버튼">
+
+    <br><br>
+
+    <button type="submit">버튼</button>
+    <button type="button">일반버튼</button>
+  </form>
   
 </body>
 </html>
